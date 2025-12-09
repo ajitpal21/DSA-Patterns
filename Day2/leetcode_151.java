@@ -6,7 +6,7 @@ class Solution {
 
         String words[] = s.split("\\s+"); //to convert entire string into 
                                            // words strings as an Array
-                                           // and remove spaces bt the words
+                                           // and remove spaces between the words 
         int i = 0;
         int j = words.length - 1;
 
