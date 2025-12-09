@@ -7,7 +7,7 @@ class Solution {
          int k = 0;
 
          while(k <= j){
-             if(nums[k] == 1){
+             if(nums[k] == 1){  // if nums[k] == 1 then move k (k++)
                 k++;
              }else if(nums[k] == 2){
                   int temp = nums[j];
