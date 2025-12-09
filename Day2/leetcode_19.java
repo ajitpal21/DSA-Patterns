@@ -21,6 +21,6 @@ class Solution {
            }
            prev.next = prev.next.next;
 
-           return dummyNode.next;
+           return dummyNode.next; // return dummyNode.next
     }
 }
