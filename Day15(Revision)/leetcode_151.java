@@ -15,7 +15,7 @@ class Solution {
               i++;
               j--;
          }
-         return String.join(" ", words); // join the words with space 
+         return String.join(" ", words); // join the words with space
     }
 }
 
