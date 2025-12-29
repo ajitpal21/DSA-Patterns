@@ -30,7 +30,7 @@ class Solution {
     }
     public List<List<Integer>> threeSum(int[] nums) {
           ArrayList<List<Integer>> list = new ArrayList<>();   
-           Arrays.sort(nums);
+          Arrays.sort(nums);
          
            for(int f = 0; f < nums.length; f++){  //f -> first pointer(starting) pointer
                 if(nums[f] > 0){  
