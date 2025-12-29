@@ -2,7 +2,6 @@
 
 
 class sortTwocolors{
- 
     public static void sortTwocolors(int nums[]){
             int i = 0;
             int j = nums.length - 1;
