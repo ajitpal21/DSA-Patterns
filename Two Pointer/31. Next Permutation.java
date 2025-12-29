@@ -14,6 +14,7 @@ class Solution {
      if(index != -1){
         //  int swap_index = -1;
          for(int j = nums.length - 1; j >= index + 1; j--){ // this is for that which index is swaped
+                
                 if(nums[index] < nums[j]){
                         // swap_index = j;
                         swap(nums, index, j);
