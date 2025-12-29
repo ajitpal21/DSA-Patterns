@@ -17,8 +17,8 @@ class Solution {
                     j--;
                     continue;
               }
-
-              if(Character.toLowerCase(left) != Character.toLowerCase(right)){
+            
+            if(Character.toLowerCase(left) != Character.toLowerCase(right)){
                      return false;
               }
               i++;
