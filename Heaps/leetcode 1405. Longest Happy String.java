@@ -1,0 +1,46 @@
+// leetcode 1405. Longest Happy String ?
+
+class Solution {
+    public String longestDiverseString(int a, int b, int c) {
+
+        // max heap: [count, character]
+        PriorityQueue<int[]> pq = new PriorityQueue<>(
+            (x, y) -> y[0] - x[0]
+        );
+
+        if (a > 0) pq.add(new int[]{a, 'a'});
+        if (b > 0) pq.add(new int[]{b, 'b'});
+        if (c > 0) pq.add(new int[]{c, 'c'});
+
+        StringBuilder sb = new StringBuilder();
+
+        while (!pq.isEmpty()) {
+            int[] first = pq.poll();
+            int len = sb.length();
+
+            // if the last two characters are same as current
+            if (len >= 2 &&
+                sb.charAt(len - 1) == first[1] &&
+                sb.charAt(len - 2) == first[1]) {
+
+                // if we have to need a second option
+                if (pq.isEmpty()) break;
+
+                int[] second = pq.poll();
+                sb.append((char) second[1]);
+                second[0]--;
+
+                if (second[0] > 0) pq.add(second);
+                pq.add(first);
+            } 
+            else {
+                sb.append((char) first[1]);
+                first[0]--;
+
+                if (first[0] > 0) pq.add(first);
+            }
+        }
+
+        return sb.toString();
+    }
+}
